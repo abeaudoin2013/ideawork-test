@@ -1,0 +1,32 @@
+//Fonts
+$reg: "Helvetica", sans-serif;
+
+$caslon: 'ACaslonPro-Regular', serif;
+@font-face {
+  font-family: 'ACaslonPro-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/ACaslonPro-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ACaslonPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/ACaslonPro-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/ACaslonPro-Regular.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/ACaslonPro-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/ACaslonPro-Regular.svg#ACaslonPro-Regular') format('svg'); /* Legacy iOS */
+}
+
+$spring: 'Springville-Regular3', serif;
+@font-face {
+  font-family: 'Springville-Regular3';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Springville-Regular3.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Springville-Regular3.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/Springville-Regular3.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/Springville-Regular3.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/Springville-Regular3.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/Springville-Regular3.svg#Springville-Regular3') format('svg'); /* Legacy iOS */
+}
+
+//Colors
+$gray: #767676;
+$light-gray: #e1e1e1;

@@ -1,3 +1,4 @@
+@import "./_vars";
 @import "./components/_Carousel";
 @import "./components/_Body";
 @import "./components/_Footer";
@@ -6,6 +7,48 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: $reg;
+}
+a {
+  color: $gray;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a:hover {
+  color: $gray;
+  text-decoration: none;
+}
+a:focus {
+  color: $gray;
+  text-decoration: none;
 }
 
+.Wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+  width: calc(100% - 150px);
+  max-width: 1400px;
+  margin: auto;
+}
+
+.text {
+  margin: 0;
+}
+.main {
+  font-family: $spring;
+  font-size: 3em;
+  letter-spacing: 2px;
+}
+.secondary {
+  font-family: $caslon;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+.sub {
+  font-family: $caslon;
+  font-size: 1em;
+}

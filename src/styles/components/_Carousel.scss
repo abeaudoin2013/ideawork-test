@@ -1,3 +1,63 @@
+@import "../_vars";
 .Carousel {
-  margin: 150px 0 0 0;
+  margin: 100px 0 0 0;
+
+  .image {
+    width: 100%;
+    max-width: 1400px;
+    height: 580px;
+    margin: 0 auto;
+    .text-wrapper {
+      width: calc(100% - 150px);
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .main {
+        margin: 75px 0 25px 0;
+      }
+      .secondary {
+        margin: 0 0 25px 0;
+      }
+      .text {
+        color: #fff;
+      }
+    }
+  }
+
+  #image-1 {
+    background: url(../image-1.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  #image-2 {
+    background: url(../image-2.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  #image-3 {
+    background: url(../image-3.jpg) no-repeat center;
+    background-size: cover;
+  }
+  .nav-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    margin: 12px 0 0 0;
+    .nav-dot {
+      cursor: pointer;
+      background-color: $light-gray;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+    }
+    .active {
+      background-color: $gray;
+    }
+    .center {
+      margin: 0 18px 0 18px;
+    }
+  }
 }
