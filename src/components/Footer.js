@@ -6,7 +6,11 @@ class Footer extends Component {
 
     return (
       <div className="Footer">
-        <p>I will be the footer.</p>
+        <div className="info logo">&copy; 2017 &mdash; Sparta Plaesent</div>
+        <div className="info dash"> &ndash; </div>
+        <div className="info links">
+          <a href="/" className="link" target="_blank">Instagram</a> &ndash; <a href="/" className="link" target="_blank">Facebook</a> &ndash; <a href="/" className="link" target="_blank">Twitter</a>
+        </div>
       </div>
     );
   }
