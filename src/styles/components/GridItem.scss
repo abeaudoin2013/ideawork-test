@@ -1,0 +1,25 @@
+.GridItem {
+  width: 350px;
+  height: 100%;
+  .Column--wrapper {
+    border-bottom: 1px solid $light-gray;
+    margin: 0 0 50px 0;
+    .img {
+      width: 100%;
+    }
+    .date {
+      margin: 40px 0 40px 0;
+      text-transform: uppercase;
+    }
+    .main {
+      margin: 0 0 35px 0;
+    }
+    .author {
+      margin: 0 0 50px 0;
+    }
+
+    .link {
+      border-bottom: 1px solid $gray;
+    }
+  }
+}
