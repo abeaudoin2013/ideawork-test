@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import Data from '../carousel_data.json';
 import Image from "./Image";
 
+
 let interval;
 class Carousel extends Component {
 
   constructor(props) {
-    super();
+    super(props);
     this.state = {};
     this.state.index = 0;
     this.state.carouselItems = Data;
@@ -16,7 +17,6 @@ class Carousel extends Component {
     this.updateIndex = this.updateIndex.bind(this);
   }
   componentDidMount() {
-    console.log("did mount");
     interval = setInterval(()=>{this.setIndex()}, 5000);
   }
   static determine(arg) {
@@ -29,28 +29,30 @@ class Carousel extends Component {
     }
   }
   updateIndex(arg) {
-    this.setState({index: arg});
+    let i;
+    if (arg >= 3) {
+      i = 0;
+    } else if (arg < 0) {
+      i = 2;
+    } else {
+      i = arg;
+    }
+    this.setState({index: i});
     clearTimeout(interval);
     this.componentDidMount();
-  }
-  makeActive(arg) {
-    this.setState({
-      active: arg
-    })
   }
 
   setIndex() {
     const self = this;
     let i = this.state.index,
     next;
-    this.makeActive(false);
 
     if (i >= 2) {
       next = 0;
     } else {
       next = i + 1;
     }
-    self.setState({index: next}, ()=> {self.makeActive(true)});
+    self.setState({index: next});
   }
 
   render() {
@@ -60,10 +62,10 @@ class Carousel extends Component {
 
         <Image key={"Image-" + this.state.index}
                index={this.state.index}
+               updateIndex={this.updateIndex}
                main={this.state.carouselItems[Carousel.determine(this.state.index)].main}
                secondary={this.state.carouselItems[Carousel.determine(this.state.index)].secondary}
                sub={this.state.carouselItems[Carousel.determine(this.state.index)].sub}/>
-
         <div className="nav-dots">
           <div className={this.state.index === 0 ? "nav-dot active" : "nav-dot"} id="nav-dot-0" onClick={()=>{this.updateIndex(0)}}/>
           <div className={this.state.index === 1 ? "nav-dot center active" : "nav-dot center"} onClick={()=>{this.updateIndex(1)}}/>

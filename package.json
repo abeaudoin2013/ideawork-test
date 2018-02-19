@@ -17,6 +17,7 @@
     "react-masonry-infinite": "^1.2.2",
     "react-moment": "^0.7.0",
     "react-scripts": "1.1.1",
+    "react-touch": "^0.4.3",
     "webpack": "^3.11.0"
   },
   "scripts": {
