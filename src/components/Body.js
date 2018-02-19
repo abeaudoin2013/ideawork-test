@@ -9,11 +9,9 @@ import grid3 from '../images/grid-3.jpg';
 import grid4 from '../images/grid-4.jpg';
 import grid5 from '../images/grid-5.jpg';
 import grid6 from '../images/grid-6.jpg';
-// import MasonryInfiniteScroller from 'react-masonry-infinite';
-
 
 class Body extends Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {};
     this.state.images = {"grid-1": grid1, "grid-2": grid2, "grid-3": grid3, "grid-4": grid4, "grid-5": grid5, "grid-6": grid6};
