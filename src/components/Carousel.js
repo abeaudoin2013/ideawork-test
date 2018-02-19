@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Data from '../carousel_data.json';
-import ReactHtmlParser from 'react-html-parser';
+import Image from "./Image";
 
 let interval;
 class Carousel extends Component {
@@ -55,32 +55,15 @@ class Carousel extends Component {
 
   render() {
 
-
     return (
       <div className="Carousel">
-        {/*<div className="image inactive" id={"image-" + Carousel.determine(this.state.index - 1)}>*/}
-          {/*<div className="text-wrapper">*/}
-            {/*<h1 className="text main">{this.state.carouselItems[Carousel.determine(this.state.index - 1)].main}</h1>*/}
-            {/*<h3 className="text secondary">{this.state.carouselItems[Carousel.determine(this.state.index - 1)].secondary}</h3>*/}
-            {/*<p className="text sub">{this.state.carouselItems[Carousel.determine(this.state.index - 1)].sub}</p>*/}
-          {/*</div>*/}
-        {/*</div>*/}
-        <div className={this.state.active ? "image active fade" : "image inactive fade"} id={"image-" + this.state.index}>
-          <div className="text-wrapper">
-            <h1 className="text main">{ReactHtmlParser(this.state.carouselItems[Carousel.determine(this.state.index)].main)}</h1>
-            <h3 className="text secondary">{ReactHtmlParser(this.state.carouselItems[Carousel.determine(this.state.index)].secondary)}</h3>
-            <p className="text sub">{ReactHtmlParser(this.state.carouselItems[Carousel.determine(this.state.index)].sub)}</p>
-          </div>
-        </div>
-        {/*<div className="image inactive" id={"image-" + Carousel.determine(this.state.index + 1)}>*/}
-          {/*<div className="text-wrapper">*/}
-            {/*<h1 className="text main">{this.state.carouselItems[Carousel.determine(this.state.index + 1)].main}</h1>*/}
-            {/*<h3 className="text secondary">{this.state.carouselItems[Carousel.determine(this.state.index + 1)].secondary}</h3>*/}
-            {/*<p className="text sub">{this.state.carouselItems[Carousel.determine(this.state.index + 1)].sub}</p>*/}
-          {/*</div>*/}
-        {/*</div>*/}
-        {/*<div className="image" />*/}
-        {/*<div className="image" />*/}
+
+        <Image key={"Image-" + this.state.index}
+               index={this.state.index}
+               main={this.state.carouselItems[Carousel.determine(this.state.index)].main}
+               secondary={this.state.carouselItems[Carousel.determine(this.state.index)].secondary}
+               sub={this.state.carouselItems[Carousel.determine(this.state.index)].sub}/>
+
         <div className="nav-dots">
           <div className={this.state.index === 0 ? "nav-dot active" : "nav-dot"} id="nav-dot-0" onClick={()=>{this.updateIndex(0)}}/>
           <div className={this.state.index === 1 ? "nav-dot center active" : "nav-dot center"} onClick={()=>{this.updateIndex(1)}}/>
