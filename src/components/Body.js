@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import data from '../data.json';
+import data from '../masonry_data.json';
 import _ from 'lodash';
 import mo from 'moment';
 import GridItem from './GridItem';
@@ -66,20 +66,21 @@ class Body extends Component {
     const self = this;
     let g = [];
     this.state.numberOfColumns.map((v) => {
-      self.state.gridData.map((w, j) => {
+      let s = self.state.gridData.map((w, j) => {
         if (window.outerWidth >= 1024) {
           if (w.index === v || w.index === v + 3) {
-            g.push(<GridItem key={"date-" + j} gridItemData={w} />);
+           return g.push(<GridItem key={"date-" + j} gridItemData={w} />);
           }
         } else if (window.outerWidth < 1024 && window.outerWidth >= 548) {
           if (w.index === v || w.index === v + 2 || w.index === v + 4) {
-            g.push(<GridItem key={"date-" + j} gridItemData={w} />);
+            return g.push(<GridItem key={"date-" + j} gridItemData={w} />);
           }
         } else {
-          g.push(<GridItem key={"date-" + j} gridItemData={w} />);
+          return g.push(<GridItem key={"date-" + j} gridItemData={w} />);
         }
-
+        return g;
       });
+      return s;
     });
     return (
       <div className="Body">

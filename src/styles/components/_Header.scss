@@ -1,5 +1,5 @@
 .Header {
-  height: 100px;
+  height: 50px;
   width: 100%;
   position: fixed;
   z-index: 3;
@@ -10,7 +10,11 @@
 
   .Wrapper-logo {
     opacity: 1;
+    width: 50%;
     transition: all .35s;
+    img {
+      width: 100%;
+    }
   }
   .Wrapper-logo:hover {
     opacity: .5;
@@ -29,6 +33,7 @@
         margin: 0 20px 0 0;
         font-size: 10px;
         vertical-align: middle;
+        float: right;
       }
       #Hamburger {
         margin: 0;
@@ -44,6 +49,17 @@
         #line-3 {
           margin: 0;
         }
+      }
+    }
+  }
+
+  @media screen and (min-width: 450px) {
+    height: 100px;
+    .Wrapper-logo {
+      width: auto;
+      img {
+        width: 100%;
+        max-width: 275px;
       }
     }
   }

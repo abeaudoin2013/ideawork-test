@@ -13,16 +13,16 @@ class Header extends Component {
           </a>
           <nav className="nav">
             <ul>
-              <li>
-                <a href="tel:2125555555">212.555.5555</a>
-              </li>
-              <li>
-                <a href="/">login</a>
-              </li>
               <li id="Hamburger">
                 <div className="line" id="line-1" />
                 <div className="line" id="line-2" />
                 <div className="line" id="line-3" />
+              </li>
+              <li>
+                <a href="/">login</a>
+              </li>
+              <li>
+                <a href="tel:2125555555">212.555.5555</a>
               </li>
             </ul>
           </nav>
