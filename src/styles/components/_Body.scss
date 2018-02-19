@@ -1,33 +1,23 @@
 .Body {
-  margin: 80px 0 120px 0;
-  @import './GridItem';
+  margin: 80px auto 120px auto;
+  width: 100%;
+  .Masonry {
+    column-count: 1;
+    column-gap: 30px;
+    @import 'GridItem';
+  }
+  @media only screen and (min-width : 548px) and (max-width: 1024px) {
+    width: 95%;
+    .Masonry {
+      column-count: 2;
+      column-gap: 45px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    width: 90%;
+    .Masonry {
+      column-count: 3;
+      column-gap: 60px;
+    }
+  }
 }
-
-
-
-//@media screen and (max-width: 910px) {
-//  .Body {
-//    .Wrapper {
-//      flex-wrap: wrap;
-//      //.Column {
-//      //  width: 100%;
-//      //}
-//    }
-//  }
-//}
-//@media screen and (max-width: 849px) {
-//  .Body {
-//    .Wrapper {
-//      .Column {
-//        margin: auto;
-//      }
-//    }
-//  }
-//}
-//@media screen and (max-width: 490px) {
-//  .Body {
-//    .Wrapper {
-//      width: calc(100% - 50px);
-//    }
-//  }
-//}

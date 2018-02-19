@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Moment from 'react-moment';
 
-
 class GridItem extends Component {
   constructor(props) {
     super(props);
@@ -11,12 +10,12 @@ class GridItem extends Component {
     this.state.title = props.gridItemData.title;
     this.state.author = props.gridItemData.author;
     this.state.index = props.gridItemData.index;
+
   }
   render() {
-    console.log(this.state.index);
     return (
-      <div className="GridItem">
-        <div className="Column--wrapper">
+      <div className="GridItem" id={"GridItem-" + this.state.index}>
+        <div className="GridItem--content">
           <img src={this.state.img} className="img" alt=""/>
           <p className="sub text date"><Moment format="MMMM D YYYY">{this.state.date}</Moment></p>
           <h1 className="main text">{this.state.title}</h1>

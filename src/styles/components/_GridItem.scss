@@ -1,0 +1,36 @@
+.GridItem {
+  height: 100%;
+  break-inside: avoid;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  .GridItem--content {
+    border-bottom: 1px solid $light-gray;
+    margin: 0;
+    .img {
+      width: 100%;
+    }
+    .date {
+      margin: 40px 0 40px 0;
+      text-transform: uppercase;
+    }
+    .main {
+      margin: 0 0 35px 0;
+    }
+    .author {
+      margin: 0 0 20px 0;
+    }
+
+    .link {
+      border-bottom: 1px solid $gray;
+    }
+    @media only screen and (min-width : 548px)  {
+      padding: 10px;
+      .GridItem--content {
+        margin: 0 0 50px 0;
+        .author {
+          margin: 0 0 50px 0;
+        }
+      }
+    }
+  }
+}
