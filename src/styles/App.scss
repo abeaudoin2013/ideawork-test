@@ -1,8 +1,10 @@
 @import "./_vars";
+@import "./animations";
 @import "./components/_Carousel";
 @import "./components/_Body";
 @import "./components/_Footer";
 @import "./components/_Header";
+@import "./components/_HamburgerMenu";
 
 body {
   margin: 0;

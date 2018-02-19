@@ -7,7 +7,7 @@ let interval;
 class Carousel extends Component {
 
   constructor(props) {
-    super(props);
+    super();
     this.state = {};
     this.state.index = 0;
     this.state.carouselItems = Data;

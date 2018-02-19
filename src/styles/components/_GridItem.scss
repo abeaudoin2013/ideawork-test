@@ -15,9 +15,24 @@
     }
     .main {
       margin: 0 0 35px 0;
+      cursor: pointer;
+      transition: all .5s;
+      font-size: 2em;
+      &:hover {
+        color: $gray;
+      }
+      @media screen and (min-width: 540px) {
+        font-size: 3em;
+      }
     }
     .author {
       margin: 0 0 20px 0;
+      a {
+        transition: all .5s;
+        &:hover {
+          color: #000;
+        }
+      }
     }
 
     .link {

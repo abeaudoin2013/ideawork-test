@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
+import HamburgerMenu from './HamburgerMenu';
 
 class Header extends Component {
+  constructor(props) {
+    super();
+    this.state = {};
+    this.state.active = false;
 
+    this.handleHamburger = this.handleHamburger.bind(this);
+  }
+  handleHamburger() {
+    this.setState({
+      active: !this.state.active
+    });
+  }
   render() {
 
     return (
@@ -13,7 +25,7 @@ class Header extends Component {
           </a>
           <nav className="nav">
             <ul>
-              <li id="Hamburger">
+              <li id="Hamburger" onClick={()=>{this.handleHamburger()}}>
                 <div className="line" id="line-1" />
                 <div className="line" id="line-2" />
                 <div className="line" id="line-3" />
@@ -27,6 +39,7 @@ class Header extends Component {
             </ul>
           </nav>
         </div>
+        <HamburgerMenu active={this.state.active} handleHamburger={this.handleHamburger}/>
       </header>
     );
   }
